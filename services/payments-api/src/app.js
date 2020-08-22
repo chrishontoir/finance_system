@@ -2,8 +2,7 @@ import Koa from 'koa';
 
 import router from './router.js';
 import config from './config/index.js';
-import { dbGateway } from './middleware/index.js';
-import { setup } from '@chrishontoir/finance-system-common';
+import { dbGateway, setup } from '@chrishontoir/finance-system-common';
 
 const app = new Koa();
 

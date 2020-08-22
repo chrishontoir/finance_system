@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "start": "node --experimental-json-modules src/app.js",
-    "dev": "nodemon --experimental-json-modules src/app.js"
+    "dev": "nodemon --experimental-json-modules src/app.js",
+    "test-unit": "jest --colors",
+    "test-coverage": "jest --coverage --colors"
   },
   "nodemonConfig": {
     "ignoreRoot": [
@@ -23,7 +25,12 @@
     "koa": "^2.13.0",
     "koa-bodyparser": "^4.3.0",
     "koa-compose": "^4.1.0",
-    "nodemon": "^2.0.4",
-    "pg-promise": "^10.6.0"
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "babel-jest": "^26.3.0",
+    "jest": "^26.4.2"
   }
 }

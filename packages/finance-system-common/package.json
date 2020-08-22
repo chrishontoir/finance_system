@@ -4,5 +4,8 @@
   "main": "src/index.js",
   "license": "MIT",
   "type": "module",
-  "repository": "git://github.com/chrishontoir/finance_system.git"
+  "repository": "git://github.com/chrishontoir/finance_system.git",
+  "dependencies": {
+    "pg-promise": "^10.6.0"
+  }
 }

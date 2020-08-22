@@ -16,6 +16,8 @@
     "start:payments-api": "lerna run start --scope payments-api --stream",
     "dev:payments-api": "lerna run dev --scope payments-api --stream",
     "docker:payments-api": "docker-compose up --build --force-recreate payments-api",
+    "test-unit:payments-api": "lerna run test-unit --scope payments-api --stream",
+    "test-coverage:payments-api": "lerna run test-coverage --scope payments-api --stream",
 
     "database": "docker-compose up --build -d database"
   },

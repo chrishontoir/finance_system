@@ -6,6 +6,7 @@ const getPayments = async ctx => {
         WHERE ACCOUNT_ID = $1 
         ORDER BY DATE DESC;
     `, [id]);
+    console.log(payments)
     return payments;
 };
 
