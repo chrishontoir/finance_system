@@ -1,6 +1,6 @@
 import payments from './payments.js';
-import { getPayments, postPayment } from '../service/index.js';
 
+import { getPayments, postPayment } from '../service/index.js';
 jest.mock('../service/index.js');
 
 let ctx;
