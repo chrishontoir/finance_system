@@ -13,6 +13,7 @@ const success = {
             origin: ctx.API_NAME,
             data: {
                 id: ctx.state.id,
+                method: ctx.method,
                 ...ctx.state.success
             }
         });

@@ -1,4 +1,4 @@
-import { getPayments } from '../service/index.js';
+import { getPayments, postPayment } from '../service/index.js';
 
 const payments = {
     get: ctx => {
@@ -7,6 +7,10 @@ const payments = {
         ctx.body = {
             payments
         }
+    },
+    post: ctx => {
+        postPayment(ctx.state.id, ctx.request.body);
+        payments.get(ctx);
     }
 }
 
