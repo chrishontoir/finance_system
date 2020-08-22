@@ -1,0 +1,16 @@
+{
+  "name": "payments-api",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-json-modules src/app.js",
+    "dev": "nodemon --watch src --experimental-json-modules src/app.js"
+  },
+  "dependencies": {
+    "@koa/router": "^9.4.0",
+    "koa": "^2.13.0",
+    "nodemon": "^2.0.4"
+  }
+}

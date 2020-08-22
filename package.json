@@ -1,0 +1,19 @@
+{
+  "name": "finance_system",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "services/*"
+  ],
+  "author": "chrishontoir <chrishontoir@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start:payments-api": "lerna run start --scope payments-api --stream",
+    "dev:payments-api": "lerna run dev --scope payments-api --stream",
+    "docker:payments-api": "docker-compose up --build payments-api"
+  },
+  "dependencies": {
+    "lerna": "^3.22.1"
+  }
+}
