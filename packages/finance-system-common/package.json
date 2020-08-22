@@ -1,0 +1,8 @@
+{
+  "name": "@chrishontoir/finance-system-common",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "type": "module",
+  "repository": "git://github.com/chrishontoir/finance_system.git"
+}

@@ -8,11 +8,8 @@ services:
         GITHUB_TOKEN: $GITHUB_TOKEN
     ports:
       - 3000:3000
-    command: 'yarn dev'
+    command: 'yarn start'
     container_name: payments-api
-    volumes:
-      - ./packages/finance-system-common:/app/node_modules/@chrishontoir/finance-system-common
-      - ./services/payments-api/src:/app/src
 
   database:
     build:

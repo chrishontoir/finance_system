@@ -6,9 +6,19 @@
   "type": "module",
   "scripts": {
     "start": "node --experimental-json-modules src/app.js",
-    "dev": "nodemon --watch src --experimental-json-modules src/app.js"
+    "dev": "nodemon --experimental-json-modules src/app.js"
+  },
+  "nodemonConfig": {
+    "ignoreRoot": [
+      ".git"
+    ],
+    "watch": [
+      "./src/**/*",
+      "./node_modules/**/*"
+    ]
   },
   "dependencies": {
+    "@chrishontoir/finance-system-common": "^1.0.0",
     "@koa/router": "^9.4.0",
     "koa": "^2.13.0",
     "koa-bodyparser": "^4.3.0",
