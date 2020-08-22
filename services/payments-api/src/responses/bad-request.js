@@ -1,21 +1,23 @@
-const BAD_REQUEST_CODE = '003';
+import codes from './codes.js';
 
 const badRequest = {
     body: ctx => {
         ctx.status = 400;
         ctx.body = {
-            code: `${ctx.API_CODE}_${BAD_REQUEST_CODE}`,
+            code: `${ctx.API_CODE}_${codes.badRequest}`,
             message: 'Bad Request'
         };
     },
     log: ctx => {
         console.log({
-            code: `${ctx.API_CODE}_${BAD_REQUEST_CODE}`,
+            code: `${ctx.API_CODE}_${codes.badRequest}`,
             message: 'Bad Request',
-            origin: 'payments-api',
-            reason: ctx.state.badRequest
+            origin: ctx.API_NAME,
+            data: {
+                reason: ctx.state.badRequest
+            }
         });
     }
-}
+};
 
 export default badRequest;

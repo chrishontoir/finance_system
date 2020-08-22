@@ -1,18 +1,22 @@
-const SUCCESS_CODE = '002';
+import codes from './codes.js';
 
 const success = {
     body: {
-        addIdentifier: ctx => ctx.body = { account: ctx.state.account, ...ctx.body, code: `${ctx.API_CODE}_${SUCCESS_CODE}` },
-        addTimestamp: ctx => ctx.body = { ...ctx.body, timestamp: new Date(), code: `${ctx.API_CODE}_${SUCCESS_CODE}` }
+        addIdentifier: ctx => ctx.body = { id: ctx.state.id, ...ctx.body },
+        addTimestamp: ctx => ctx.body = { ...ctx.body, timestamp: new Date() },
+        addCode: ctx => ctx.body = { ...ctx.body, code: `${ctx.API_CODE}_${codes.success}`}
     },
     log: ctx => {
         console.log({ 
-            code: `${ctx.API_CODE}_${SUCCESS_CODE}`, 
+            code: `${ctx.API_CODE}_${codes.success}`, 
             message: 'Successful', 
-            origin: 'payments-api', 
-            account: ctx.state.account 
+            origin: ctx.API_NAME,
+            data: {
+                id: ctx.state.id,
+                ...ctx.state.success
+            }
         });
     }
-}
+};
 
 export default success;

@@ -1,7 +1,9 @@
+import { getPayments } from '../service/index.js';
+
 const payments = {
     get: ctx => {
-        const account = ctx.state.account;
-        const payments = [];
+        const payments = getPayments(ctx.state.id);
+        ctx.state.success = { noOfPayments: payments.length }
         ctx.body = {
             payments
         }

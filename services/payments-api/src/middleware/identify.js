@@ -1,8 +1,8 @@
 import { badRequest, success } from '../responses/index.js';
 
 const identify = async (ctx, next) => {
-    ctx.state.account = ctx.request.query.account;
-    if (!ctx.state.account) {
+    ctx.state.id = ctx.request.query.account;
+    if (!ctx.state.id) {
         ctx.state.badRequest = 'No Account Provided'
         badRequest.body(ctx);
         badRequest.log(ctx);
@@ -10,6 +10,6 @@ const identify = async (ctx, next) => {
     }
     await next();
     success.body.addIdentifier(ctx);
-}
+};
 
 export default identify;

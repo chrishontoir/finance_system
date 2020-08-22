@@ -1,3 +1,5 @@
 {
+    "code": "PAY_API",
+    "name": "payments-api",
     "port": "&&PAYMENTS_API_PORT&&"
 }

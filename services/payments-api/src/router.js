@@ -1,7 +1,7 @@
 import Router from '@koa/router';
 
-import { payments } from './controllers/index.js'
-import middleware from './middleware/index.js'
+import { middleware } from './middleware/index.js';
+import { payments } from './controllers/index.js';
 
 const router = new Router();
 

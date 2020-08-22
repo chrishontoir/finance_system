@@ -1,11 +1,11 @@
-const ELAPSED_TIME_CODE = '001';
+import codes from './codes.js';
 
 const elapsedTime = {
     log: ctx => {
         console.log({
-            code: `${ctx.API_CODE}_${ELAPSED_TIME_CODE}`,
+            code: `${ctx.API_CODE}_${codes.elapsedTime}`,
             message: 'API Elapsed Time',
-            origin: 'payments-api',
+            origin: ctx.API_NAME,
             elapsed: ctx.state.elapsed
         });
     }
