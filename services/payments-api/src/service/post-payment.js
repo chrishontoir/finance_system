@@ -1,15 +1,14 @@
-import payments from '../mocks/payments.js';
+const postPayment = async ctx => {
+    const id = ctx.state.id;
+    const { description, amount } = ctx.request.body;
+    const date = new Date();
 
-const postPayment = (id, payment) => {
-    const { description, amount } = payment;
-    const paymentId = payments[payments.length - 1].paymentId + 1;
-    payments.push({
-        paymentId,
-        accountId: id,
-        description,
-        amount,
-        date: new Date()
-    });
+    await ctx.db.query(`
+        INSERT INTO T001PAYMENTS 
+        (ACCOUNT_ID, DESCRIPTION, AMOUNT, DATE) 
+        VALUES 
+        ($1, $2, $3, $4);
+    `, [id, description, amount, date]);
 };
 
 export default postPayment;

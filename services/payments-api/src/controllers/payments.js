@@ -1,16 +1,16 @@
 import { getPayments, postPayment } from '../service/index.js';
 
 const payments = {
-    get: ctx => {
-        const payments = getPayments(ctx.state.id);
+    get: async ctx => {
+        const payments = await getPayments(ctx);
         ctx.state.success = { noOfPayments: payments.length }
         ctx.body = {
             payments
         }
     },
-    post: ctx => {
-        postPayment(ctx.state.id, ctx.request.body);
-        payments.get(ctx);
+    post: async ctx => {
+        await postPayment(ctx);
+        await payments.get(ctx);
     }
 }
 

@@ -1,5 +1,12 @@
 {
-    "code": "PAY_API",
+    "code": "PYMT_API",
     "name": "payments-api",
-    "port": "&&PAYMENTS_API_PORT&&"
+    "port": "&&PAYMENTS_API_PORT&&",
+    "database": {
+        "host": "&&DATABASE_HOSTNAME&&",
+        "port": "&&DATABASE_PORT&&",
+        "database": "&&DATABASE_NAME&&",
+        "user": "&&DATABASE_USER&&",
+        "password": "&&DATABASE_PW&&"
+    }
 }
