@@ -3,7 +3,7 @@ version: "3.8"
 services:
   payments-api:
     build:
-      context: ./services/payments-api
+      context: ./services/fs-payments-api
       args:
         GITHUB_TOKEN: $GITHUB_TOKEN
     ports:
@@ -11,13 +11,13 @@ services:
     command: 'yarn dev'
     container_name: payments-api
     volumes:
-      - ./packages/finance-system-common:/app/node_modules/@chrishontoir/finance-system-common
-      - ./services/payments-api/src:/app/src
+      - ./packages/fs-common:/app/node_modules/@chrishontoir/fs-common
+      - ./services/fs-payments-api/src:/app/src
       - ./node_modules:/app/node_modules
 
   database:
     build:
-      context: ./services/database
+      context: ./services/fs-database
     container_name: database
     environment:
       POSTGRES_USER: "postgres"
@@ -26,4 +26,4 @@ services:
       POSTGRES_DB: finance_system_db
       PGPORT: 5432
     volumes:
-      - ./services/database/data:/var/lib/postgresql/data
+      - ./services/fs-database/data:/var/lib/postgresql/data

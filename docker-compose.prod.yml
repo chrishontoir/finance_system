@@ -3,7 +3,7 @@ version: "3.8"
 services:
   payments-api:
     build:
-      context: ./services/payments-api
+      context: ./services/fs-payments-api
       args:
         GITHUB_TOKEN: $GITHUB_TOKEN
     ports:
@@ -13,13 +13,13 @@ services:
 
   database:
     build:
-      context: ./services/database
+      context: ./services/fs-database
     container_name: database
     environment:
-      POSTGRES_USER: "postgres"
-      POSTGRES_PASSWORD: "postgres"
-      DB_NAME: "finance_system_db"
-      POSTGRES_DB: finance_system_db
-      PGPORT: 5432
+      POSTGRES_USER: "&&DATABASE_USER&&"
+      POSTGRES_PASSWORD: "&&DATABASE_PW&&"
+      DB_NAME: "&&DATABASE_NAME&&"
+      POSTGRES_DB: "&&DATABASE_NAME&&"
+      PGPORT: "&&DATABASE_PORT&&"
     volumes:
-      - ./services/database/data:/var/lib/postgresql/data
+      - ./services/fs-database/data:/var/lib/postgresql/data

@@ -1,5 +1,5 @@
 {
-  "name": "payments-api",
+  "name": "@chrishontoir/fs-payments-api",
   "version": "1.0.0",
   "main": "src/app.js",
   "license": "MIT",
@@ -20,7 +20,7 @@
     ]
   },
   "dependencies": {
-    "@chrishontoir/finance-system-common": "^1.0.0",
+    "@chrishontoir/fs-common": "^1.0.0",
     "@koa/router": "^9.4.0",
     "koa": "^2.13.0",
     "koa-bodyparser": "^4.3.0",
