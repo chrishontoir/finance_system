@@ -6,8 +6,17 @@ import { payments } from './controllers/index.js';
 
 const router = new Router();
 
-router.get('/payments', middleware, payments.get);
+router.get(
+    '/payments', 
+    middleware({ id: 'account' }), 
+    payments.get
+);
 
-router.post('/payments', bodyParser(), middleware, payments.post);
+router.post(
+    '/payments', 
+    bodyParser(), 
+    middleware({ id: 'account' }), 
+    payments.post
+);
 
 export default router;

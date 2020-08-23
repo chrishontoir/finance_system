@@ -12,6 +12,9 @@
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
 
+    "all:test-unit": "lerna run test-unit --stream",
+    "all:test-coverage": "lerna run test-coverage --stream",
+
     "payments-api:start": "lerna run start --scope @chrishontoir/fs-payments-api --stream",
     "payments-api:dev": "lerna run dev --scope @chrishontoir/fs-payments-api --stream",
     "payments-api:docker": "docker-compose up --build --force-recreate payments-api",
