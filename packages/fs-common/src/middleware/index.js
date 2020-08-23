@@ -11,8 +11,8 @@ import responseLogger from './response-logger.js';
 const middleware = identityField => compose([
     helmet(),
     elapsed,
-    identify(identityField),
-    responseLogger
+    responseLogger,
+    identify(identityField)
 ]);
 
 export {

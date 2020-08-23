@@ -6,6 +6,7 @@
   "type": "module",
   "repository": "git://github.com/chrishontoir/finance_system.git",
   "dependencies": {
+    "chalk": "^4.1.0",
     "koa-compose": "^4.1.0",
     "koa-helmet": "^5.2.0",
     "pg-promise": "^10.6.0"

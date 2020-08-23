@@ -9,7 +9,7 @@ const elapsed = async (ctx, next) => {
     if (ctx.response.status === 200) {
         success.body.addTimestamp(ctx);
     }
-    elapsedTime.log(ctx);
+    // elapsedTime.log(ctx);
 }
 
 export default elapsed;
