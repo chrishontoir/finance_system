@@ -1,0 +1,11 @@
+{
+  "name": "@chrishontoir/fs-authenticate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "node-jose": "^1.1.4"
+  }
+}

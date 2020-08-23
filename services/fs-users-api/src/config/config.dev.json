@@ -1,0 +1,12 @@
+{
+    "code": "USER_API",
+    "name": "user-api",
+    "port": 3001,
+    "database": {
+        "host": "database",
+        "port": 5432,
+        "database": "finance_system_db",
+        "user": "postgres",
+        "password": "postgres"
+    }
+}

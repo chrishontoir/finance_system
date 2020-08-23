@@ -2,7 +2,7 @@ import codes from './codes.js';
 
 const success = {
     body: {
-        addIdentifier: ctx => ctx.body = { id: ctx.state.id, ...ctx.body },
+        addIdentifier: ctx => ctx.body = { [ctx.state.id.type]: ctx.state.id.value, ...ctx.body },
         addTimestamp: ctx => ctx.body = { ...ctx.body, timestamp: new Date() },
         addCode: ctx => ctx.body = { ...ctx.body, code: `${ctx.API_CODE}_${codes.success}`}
     },
@@ -12,7 +12,7 @@ const success = {
             message: 'Successful', 
             origin: ctx.API_NAME,
             data: {
-                id: ctx.state.id,
+                [ctx.state.id.type]: ctx.state.id.value,
                 method: ctx.method,
                 ...ctx.state.success
             }

@@ -2,7 +2,6 @@
   "name": "finance_system",
   "version": "1.0.0",
   "private": true,
-  "useWorkspaces": true,
   "workspaces": [
     "packages/*",
     "services/*"
@@ -13,11 +12,17 @@
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
 
-    "start:payments-api": "lerna run start --scope payments-api --stream",
-    "dev:payments-api": "lerna run dev --scope payments-api --stream",
-    "docker:payments-api": "docker-compose up --build --force-recreate payments-api",
-    "test-unit:payments-api": "lerna run test-unit --scope payments-api --stream",
-    "test-coverage:payments-api": "lerna run test-coverage --scope payments-api --stream",
+    "payments-api:start": "lerna run start --scope @chrishontoir/fs-payments-api --stream",
+    "payments-api:dev": "lerna run dev --scope @chrishontoir/fs-payments-api --stream",
+    "payments-api:docker": "docker-compose up --build --force-recreate payments-api",
+    "payments-api:test-unit": "lerna run test-unit --scope @chrishontoir/fs-payments-api --stream",
+    "payments-api:test-coverage": "lerna run test-coverage --scope @chrishontoir/fs-payments-api --stream",
+
+    "users-api:start": "lerna run start --scope @chrishontoir/fs-users-api --stream",
+    "users-api:dev": "lerna run dev --scope @chrishontoir/fs-users-api --stream",
+    "users-api:docker": "docker-compose up --build --force-recreate users-api",
+    "users-api:test-unit": "lerna run test-unit --scope @chrishontoir/fs-users-api --stream",
+    "users-api:test-coverage": "lerna run test-coverage --scope @chrishontoir/fs-users-api --stream",
 
     "database": "docker-compose up --build -d database"
   },

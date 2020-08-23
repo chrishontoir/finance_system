@@ -1,0 +1,12 @@
+{
+    "code": "USER_API",
+    "name": "user-api",
+    "port": "&&USER_API_PORT&&",
+    "database": {
+        "host": "&&DATABASE_HOSTNAME&&",
+        "port": "&&DATABASE_PORT&&",
+        "database": "&&DATABASE_NAME&&",
+        "user": "&&DATABASE_USER&&",
+        "password": "&&DATABASE_PW&&"
+    }
+}

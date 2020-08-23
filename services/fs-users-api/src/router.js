@@ -2,12 +2,12 @@ import Router from '@koa/router';
 import bodyParser from 'koa-bodyparser';
 
 import { middleware } from '@chrishontoir/fs-common';
-import { payments } from './controllers/index.js';
+import { user } from './controllers/index.js';
 
 const router = new Router();
 
-router.get('/payments', middleware, payments.get);
+router.get('/user', middleware(), user.get);
 
-router.post('/payments', bodyParser(), middleware, payments.post);
+router.post('/user', bodyParser(), middleware, user.post);
 
 export default router;

@@ -1,6 +1,6 @@
 import http from 'http';
 
-const setup = (app, config) => {
+const initializeService = (app, config) => {
     app.context.API_CODE = config.code,
     app.context.API_NAME = config.name
 
@@ -9,4 +9,4 @@ const setup = (app, config) => {
     });
 }
 
-export default setup;
+export default initializeService;

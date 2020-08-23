@@ -1,6 +1,11 @@
-import { setup, dbGateway } from './middleware/index.js';
+import { initializeDatabase, initializeService, middleware } from './middleware/index.js';
+import { badRequest, elapsedTime, success } from './responses/index.js';
+
+const response = { badRequest, elapsedTime, success };
 
 export {
-    dbGateway,
-    setup
+    initializeDatabase,
+    initializeService,
+    middleware,
+    response
 };

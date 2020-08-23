@@ -11,9 +11,23 @@ services:
     command: 'yarn dev'
     container_name: payments-api
     volumes:
-      - ./packages/fs-common:/app/node_modules/@chrishontoir/fs-common
       - ./services/fs-payments-api/src:/app/src
       - ./node_modules:/app/node_modules
+      - ./packages/fs-common:/app/node_modules/@chrishontoir/fs-common
+
+  users-api:
+    build:
+      context: ./services/fs-users-api
+      args:
+        GITHUB_TOKEN: $GITHUB_TOKEN
+    ports:
+      - 3001:3001
+    command: 'yarn dev'
+    container_name: users-api
+    volumes:
+      - ./services/fs-users-api/src:/app/src
+      - ./node_modules:/app/node_modules
+      - ./packages/fs-common:/app/node_modules/@chrishontoir/fs-common
 
   database:
     build:
