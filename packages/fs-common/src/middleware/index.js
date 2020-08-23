@@ -6,12 +6,11 @@ import initializeService from './initialize-service.js';
 
 import elapsed from './elapsed.js';
 import identify from './identify.js';
-import responseLogger from './response-logger.js';
+import requestResponseLogger from './request-response-logger.js';
 
 const middleware = identityField => compose([
     helmet(),
-    elapsed,
-    responseLogger,
+    requestResponseLogger,
     identify(identityField)
 ]);
 

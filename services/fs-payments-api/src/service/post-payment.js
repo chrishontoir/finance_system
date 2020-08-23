@@ -1,5 +1,5 @@
 const postPayment = async ctx => {
-    const id = ctx.state.id;
+    const id = ctx.state.id.value;
     const { description, amount } = ctx.request.body;
     const date = new Date();
 
