@@ -1,6 +1,6 @@
 {
   "name": "@chrishontoir/fs-users-api",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index.js",
   "license": "MIT",
   "type": "module",
@@ -20,7 +20,7 @@
     ]
   },
   "dependencies": {
-    "@chrishontoir/fs-common": "^1.0.0",
+    "@chrishontoir/fs-common": "^1.1.0",
     "@koa/router": "^9.4.0",
     "koa": "^2.13.0",
     "koa-bodyparser": "^4.3.0",
