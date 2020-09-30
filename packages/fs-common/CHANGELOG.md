@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/chrishontoir/finance_system/compare/@chrishontoir/fs-common@1.2.0...@chrishontoir/fs-common@1.2.1) (2020-09-30)
+
+
+### Bug Fixes
+
+* test versioning ([87cdcf3](https://github.com/chrishontoir/finance_system/commit/87cdcf3a6a38316a08ed2772c0232ab1991ab9d3))
+
+
+
+
+
 # 1.2.0 (2020-09-30)
 
 
