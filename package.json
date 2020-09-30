@@ -27,7 +27,9 @@
     "users-api:test-unit": "lerna run test-unit --scope @chrishontoir/fs-users-api --stream",
     "users-api:test-coverage": "lerna run test-coverage --scope @chrishontoir/fs-users-api --stream",
 
-    "database": "docker-compose up --build -d database"
+    "database": "docker-compose up --build -d database",
+
+    "ci:version": "lerna version --conventional-commits --no-push --yes"
   },
   "dependencies": {
     "lerna": "^3.22.1"
